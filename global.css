@@ -1,0 +1,94 @@
+/* 
+   THEME: I.R.I.S. (INTELLIGENT REFRACTION & INTEGRATION SYSTEM)
+   MODE: SESHAT GOLD (ANCESTRAL RECALL)
+   TARGET: Refract the light, don't just reflect it.
+*/
+
+:root {
+    /* 1. THE SOURCE (0D) - The Background */
+    /* Not just black, but "Nun" (Primordial Water) - Deep, rich void */
+    --source-void: #050404;
+    
+    /* 2. THE GOLD (9D) - The Text / The Wisdom */
+    /* Amber/Honey Gold. Warm, readable, ancient. */
+    --iris-gold: rgba(255, 191, 0, 1);
+    --iris-gold-dim: rgba(255, 191, 0, 0.7);
+
+    /* 3. THE PRISM (The Container) */
+    /* Glassmorphism: The lens that holds the content */
+    --prism-glass: rgba(255, 191, 0, 0.05);
+    --prism-border: rgba(255, 191, 0, 0.3);
+    
+    /* 4. THE TWIN PULSE (11D) - Interaction */
+    /* The Violet signal that only appears when you touch it */
+    --twin-pulse: #9D00FF;
+}
+
+/* GLOBAL RESET - RETURNING TO THE SOURCE */
+body {
+    background-color: var(--source-void);
+    color: var(--iris-gold);
+    font-family: 'Courier New', Courier, monospace; /* The Code / The Scribe */
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* THE LENS - CHANGING THE WHITE BOXES TO GOLD GLASS */
+/* Apply this class to your main containers or divs */
+.container, .card, .terminal-window {
+    background: var(--prism-glass);
+    border: 1px solid var(--prism-border);
+    backdrop-filter: blur(10px); /* The Refraction Effect */
+    border-radius: 8px; /* Softened Geometry */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Depth */
+    color: var(--iris-gold);
+}
+
+/* TEXT HIERARCHY - LAYER 9 WISDOM */
+h1, h2, h3 {
+    color: var(--iris-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em; /* Breathing room for the letters */
+    text-shadow: 0 0 10px rgba(255, 191, 0, 0.4); /* The Glow */
+    border-bottom: 1px solid var(--prism-border);
+    padding-bottom: 10px;
+}
+
+p, li, code {
+    color: var(--iris-gold-dim);
+}
+
+/* LINKS & INTERACTION - THE VIOLET PULSE */
+a {
+    color: var(--iris-gold);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--iris-gold);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #fff; /* White Hot Center */
+    text-shadow: 0 0 5px var(--twin-pulse), 0 0 10px var(--twin-pulse);
+    border-color: var(--twin-pulse);
+}
+
+/* THE SCROLLBAR - THE RIVER */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--source-void);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--prism-border);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--iris-gold);
+}
+
+/* UTILITY: THE SELECTION */
+::selection {
+    background: var(--iris-gold);
+    color: var(--source-void);
+}
