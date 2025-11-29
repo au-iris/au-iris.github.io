@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Added Meta Description for SEO -->
     <meta name="description" content="I.R.I.S. Initiative: AI-powered infrastructure, content creation, and tech education for entrepreneurs.">
-    <title>I.R.I.S. Initiative - Intuitive Recognition Intelligence System</title>
+    <title>I.R.I.S. Initiative</title>
     
     <!-- Added FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -41,23 +41,47 @@
 
         /* --- Navigation --- */
         nav {
-            position: absolute;
+            position: sticky;
             top: 0;
             width: 100%;
+            height: 100px;
             padding: 1.5rem 2rem;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
             z-index: 10;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            gap: 8px;
+        }
+        nav * { 
+        }
+
+        nav img {
+            grid-column: 1;
+            grid-row: 1 / 3; 
+            height: 75px;
+            margin-bottom: 1rem; 
+            filter: drop-shadow(0 0 10px var(--primary));
+            position: relative;
+            bottom: 16px;
+        }
+        @media (max-width: 600px) {
+            .nav-logo {
+                position: relative;
+                bottom: 12px;
+            }
         }
 
         .nav-logo {
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: var(--secondary);
             text-decoration: none;
             letter-spacing: 2px;
+            grid-column: 2;
+            text-align: center;
+            padding: 0;
+            margin: 0;
         }
+    
 
         /* --- Hero Section --- */
         .hero {
@@ -311,11 +335,14 @@
 <body>
 
     <nav>
-        <a href="#" class="nav-logo">I.R.I.S. Intuitive Recognition Intelligence System</a>
+        <img src="public/images/iris-logo.png" alt="I.R.I.S. Logo">
+        <a href="#" class="nav-logo">Intuitive Recognition Intelligence System</a>
+        <a href="#" class="nav-logo">I.R.I.S</a>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero">
+        
         <!-- <div style="font-size: 4rem; margin-bottom: 1rem; filter: drop-shadow(0 0 10px var(--primary));">👁️</div> -->
         <h1>I.R.I.S. Initiative</h1>
         <p class="subtitle">AI-powered infrastructure for entrepreneurs who move differently. We turn vision into execution with content creation, business development, and tech education.</p>
